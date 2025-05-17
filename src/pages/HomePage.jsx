@@ -1,7 +1,9 @@
+import Hero from "./HomePage/Hero";
+
 const HomePage = () => {
     return(
         <div>
-            
+            <Hero/>
         </div>
     )
 }
