@@ -1,6 +1,6 @@
 const NavBar = () => {
     return(
-        <div className="bg-[#5C6C4A] text-[#FBFBFB] px-[20x] fixed z-10 w-screen max-w-full">
+        <div className="bg-[#5C6C4A] text-[#FBFBFB] px-[20x] fixed min-h-[108px] z-10 w-screen max-w-full">
             <div className="flex items-center justify-around">
                 <div className="flex items-center">
                     <img className="cursor-pointer" src="/images/Logo.png"></img>
