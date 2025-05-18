@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 import About from "./HomePage/About";
 import Blog from "./HomePage/Blog";
 import Hero from "./HomePage/Hero";
@@ -13,7 +12,6 @@ const HomePage = () => {
             <Services/>
             <Blog/>
             <Review/>
-            <Footer/>
         </div>
     )
 }
