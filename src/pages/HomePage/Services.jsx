@@ -60,7 +60,7 @@ const Services = () => {
                         ))}
                         {slides.map((slide, index) => (
                             <SwiperSlide className="h-full max-w-[308px]" key={index}>
-                                <div className="flex h-[306px] justify-center items-center relative">
+                                <div className="flex h-[306px] justify-center items-center relative drop-shadow-black drop-shadow-[2px]">
                                     <div className='relative'>
                                         <img className="max-h-[306px] min-w-[124px] aspect-square" src={slide.image} />
                                         <div className=' inset-0 text-white absolute font-bold  bg-[#0B0B0B80] flex items-center justify-center flex-col'>                                    

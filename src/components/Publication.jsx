@@ -1,0 +1,23 @@
+const Publication = ({image,title,text}) => {
+    return(
+        <div>
+            <div className="w-fit">
+                <div className="w-full h-[1px] bg-[#000000]"/>
+                <div className="max-w-[650px] py-[37px] flex md:flex-row">
+                    <img className="rounded-[8px] mr-[25px] max-h-[400] max-w-[200px] aspect-[12/14] object-cover" src={image} alt="blog"/>
+                    <div className="max-w-[400px] flex flex-col justify-between">
+                        <div>
+                            <h1 className=" mb-[24px] font-playfair-display font-bold text-[#485935] text-[28px]">{title}</h1>
+                            <p className="font-open-sans text-[18px]">{text}</p>
+                        </div>
+                        <div className="my-[20px] rounded-[8px] bg-[#93A267] hover:bg-[#636d43] cursor-pointer text-white px-[11px] py-[12px] w-fit flex items-center justify-center">
+                            <p className="text-[18px] font-open-sans font-bold">VER MÁS</p>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Publication;

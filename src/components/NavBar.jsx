@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
     return(
         <div className="bg-[#5C6C4A] text-[#FBFBFB] px-[20x] fixed min-h-[108px] z-10 w-screen max-w-full">
@@ -8,9 +10,9 @@ const NavBar = () => {
                 </div>
                 <div>
                     <ul className="font-open-sans text-[22px] lg:text-[28px] ease-in-out flex flex-row gap-[32px]">
-                        <li className="relative cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Inicio</li>
+                        <Link to={"/"} className="relative cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Inicio</Link>
                         <li className="relative cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Servicios</li>
-                        <li className="relative cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Blog</li>
+                        <Link to={"/blog"} className="relative cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Blog</Link>
                         <li className="relative cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Contacto</li>
                         <div className="rounded-[8px] bg-[#93A267] hover:bg-[#b2c17f] cursor-pointer text-white px-[12px] py-[6px] w-fit flex items-center justify-center">
                             <p className="font-open-sans font-bold">RESERVA AHORA</p>

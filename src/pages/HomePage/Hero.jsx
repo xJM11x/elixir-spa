@@ -1,4 +1,4 @@
-import Button from "../../components/Button";
+import Boton from "../../components/Boton";
 
 const Hero = () => {
     return(
@@ -11,7 +11,7 @@ const Hero = () => {
                 <div className="px-[80px] h-full w-full flex justify-center items-center text-white flex-col">
                     <h1 className="mb-[24px] font-playfair-display font-bold text-[50px]">Elixir Spa - Refresh. Relax. Renew</h1>
                     <p className="mb-[40px] font-open-sans text-[24px] font-bold">Elixir spa donde la calma florece</p>
-                    <Button name={'RESERVA AHORA'} />
+                    <Boton name={'RESERVA AHORA'} />
                 </div>
             </div>
         </div>
