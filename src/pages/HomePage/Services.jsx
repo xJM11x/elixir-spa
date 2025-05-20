@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { useRef } from "react"; 
+import { Link } from 'react-router-dom';
 
 const Services = () => {
 
@@ -9,22 +10,27 @@ const Services = () => {
         {
             image: "/images/services/Hidratacion.png",
             text: "HIDRATACIÓN",
+            link: "hidratacion"
         },
         {
             image: "/images/services/LimpiezaFacial.png",
             text: "LIMPIEZA FACIAL",
+            link: "limpieza"
         },
         {
             image: "/images/services/MasajesFaciales.png",
             text: "MASAJES FACIALES",
+            link: "masajes"
         },
         {
             image: "/images/services/Mascarillas.png",
             text: "MASCARILLAS",
+            link: "mascarillas"
         },
         {
             image: "/images/services/Terapias.png",
             text: "TERAPIAS",
+            link: "terapias"
         },
     ];
     return(
@@ -50,9 +56,9 @@ const Services = () => {
                                         <img className="max-h-[306px] min-w-[124px] aspect-square" src={slide.image} />
                                         <div className=' inset-0 text-white absolute font-bold  bg-[#0B0B0B80] flex items-center justify-center flex-col'>                                    
                                             <p className='text-center text-[26px] font-playfair-display'>{slide.text}</p>
-                                            <div className='group hover:bg-[#636d43] cursor-pointer font-open-sans text-[20px] absolute flex items-center justify-center  bg-[#93A267] bottom-0 w-full h-full max-h-[20%]'>
+                                            <Link to={`/serviceDetail/` + slide.link} className='group hover:bg-[#636d43] cursor-pointer font-open-sans text-[20px] absolute flex items-center justify-center  bg-[#93A267] bottom-0 w-full h-full max-h-[20%]'>
                                                 <p className=' group-hover:scale-110'>VER MÁS</p>
-                                            </div>
+                                            </Link>
                                     </div>
                                     </div>
                                 </div>
@@ -65,9 +71,9 @@ const Services = () => {
                                         <img className="max-h-[306px] min-w-[124px] aspect-square" src={slide.image} />
                                         <div className=' inset-0 text-white absolute font-bold  bg-[#0B0B0B80] flex items-center justify-center flex-col'>                                    
                                             <p className='text-center text-[26px] font-playfair-display'>{slide.text}</p>
-                                            <div className='group hover:bg-[#636d43] cursor-pointer font-open-sans text-[20px] absolute flex items-center justify-center  bg-[#93A267] bottom-0 w-full h-full max-h-[20%]'>
+                                            <Link to={`/serviceDetail/` + slide.link} className='group hover:bg-[#636d43] cursor-pointer font-open-sans text-[20px] absolute flex items-center justify-center  bg-[#93A267] bottom-0 w-full h-full max-h-[20%]'>
                                                 <p className=' group-hover:scale-110'>VER MÁS</p>
-                                            </div>
+                                            </Link>
                                     </div>
                                     </div>
                                 </div>

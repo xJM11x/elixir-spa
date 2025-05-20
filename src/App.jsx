@@ -6,6 +6,7 @@ import BlogPage from "./pages/BlogPage";
 import ArticlePage from "./pages/ArticlePage";
 import ScrollToTop from "./components/ScrollToTop";
 import ServicesPage from "./pages/ServicesPage";
+import ServiceDetailPage from "./pages/ServiceDetailPage";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/blog" element = {<BlogPage/>}/>
         <Route path="/article/:id" element = {<ArticlePage/>}/>
         <Route path="/services" element = {<ServicesPage/>}/>
+        <Route path="/serviceDetail/:id" element={<ServiceDetailPage/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

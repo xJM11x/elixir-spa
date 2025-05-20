@@ -17,7 +17,7 @@ const Review = () => {
                 <img className="absolute left-[15px] top-[-30px]" src="/images/Ellipse2.png"></img>
                 <div className=" ml-[114px] mt-[2px]">
                     <p className="font-open-sans font-bold text-[24px]">Emma Jhonson</p>
-                    <img src="/images/Stars1.png"></img>
+                    <img src="/images/Stars2.png"></img>
                 </div>
                 <div className="pb-[24px] pt-[15px] ">
                     <p className="font-open-sans font-bold text-[24px]">Usan productos de calidad y se nota desde el primer minuto. 100% recomendado.</p>
@@ -27,7 +27,7 @@ const Review = () => {
                 <img className="absolute left-[15px] top-[-30px]" src="/images/Ellipse3.png"></img>
                 <div className=" ml-[114px] mt-[2px]">
                     <p className="font-open-sans font-bold text-[24px]">Esther Jhones</p>
-                    <img src="/images/Stars1.png"></img>
+                    <img src="/images/Stars2.png"></img>
                 </div>
                 <div className="pb-[24px] pt-[15px] ">
                     <p className="font-open-sans font-bold text-[24px]">Probé la hidratación profunda y salí encantada. ¡Mi piel nunca se había sentido tan fresca!</p>

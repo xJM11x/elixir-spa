@@ -1,24 +1,31 @@
+import { Link } from "react-router-dom";
+
 const ServicesPage = () => {
     const services = [
         {
             image: "/images/services/Hidratacion.png",
             text: "Hidratación",
+            link: "hidratacion"
         },
         {
             image: "/images/services/LimpiezaFacial.png",
             text: "Limpieza Facial",
+            link: "limpieza"        
         },
         {
             image: "/images/services/MasajesFaciales.png",
             text: "Masajes Faciales",
+            link: "masajes"
         },
         {
             image: "/images/services/Mascarillas.png",
             text: "Mascarillas",
+            link: "mascarillas"
         },
         {
             image: "/images/services/Terapias.png",
             text: "Terapias",
+            link: "terapias"
         },
     ];
 
@@ -34,9 +41,9 @@ const ServicesPage = () => {
                 <div className="grid grid-cols-2 gap-y-[32px] gap-x-[10px] sm:gap-x-[35px] md:gap-x-[85px] lg:gap-x-[80px] mt-[54px] bg-white/70 px-[10px] sm:px-[35px] md:px-[97px] py-[45px] rounded-[10px]">
                     {services.map((serv, index) => (
                     <div key={index} className="w-fit font-inter">
-                        <img className="rounded-[8px] w-full max-h-[306px] max-w-[308px] aspect-[16/11] object-cover" src={serv.image} alt="serv" />
+                        <Link to={"/serviceDetail/" + serv.link}><img className="transition-transform hover:scale-105 rounded-[8px] w-full max-h-[306px] max-w-[308px] aspect-[16/11] object-cover" src={serv.image} alt="serv" /></Link>
                         <p className="mt-[12px] text-[20px] font-medium text-[#000000]">{serv.text}</p>
-                        <p className="inline-flex cursor-pointer text-[16px] text-[#5C6C4A]">Ver Más</p>
+                        <Link to={"/serviceDetail/" + serv.link}><p className="transition-transform hover:scale-105  inline-flex cursor-pointer text-[16px] text-[#5C6C4A]">Ver Más</p></Link>
                     </div>
                     ))} 
                 </div>
