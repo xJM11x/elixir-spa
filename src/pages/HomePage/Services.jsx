@@ -50,8 +50,8 @@ const Services = () => {
                                         <img className="max-h-[306px] min-w-[124px] aspect-square" src={slide.image} />
                                         <div className=' inset-0 text-white absolute font-bold  bg-[#0B0B0B80] flex items-center justify-center flex-col'>                                    
                                             <p className='text-center text-[26px] font-playfair-display'>{slide.text}</p>
-                                            <div className='hover:bg-[#636d43] cursor-pointer font-open-sans text-[20px] absolute flex items-center justify-center  bg-[#93A267] bottom-0 w-full h-full max-h-[20%]'>
-                                                VER MÁS
+                                            <div className='group hover:bg-[#636d43] cursor-pointer font-open-sans text-[20px] absolute flex items-center justify-center  bg-[#93A267] bottom-0 w-full h-full max-h-[20%]'>
+                                                <p className=' group-hover:scale-110'>VER MÁS</p>
                                             </div>
                                     </div>
                                     </div>
@@ -65,8 +65,8 @@ const Services = () => {
                                         <img className="max-h-[306px] min-w-[124px] aspect-square" src={slide.image} />
                                         <div className=' inset-0 text-white absolute font-bold  bg-[#0B0B0B80] flex items-center justify-center flex-col'>                                    
                                             <p className='text-center text-[26px] font-playfair-display'>{slide.text}</p>
-                                            <div className='hover:bg-[#636d43] cursor-pointer font-open-sans text-[20px] absolute flex items-center justify-center  bg-[#93A267] bottom-0 w-full h-full max-h-[20%]'>
-                                                VER MÁS
+                                            <div className='group hover:bg-[#636d43] cursor-pointer font-open-sans text-[20px] absolute flex items-center justify-center  bg-[#93A267] bottom-0 w-full h-full max-h-[20%]'>
+                                                <p className=' group-hover:scale-110'>VER MÁS</p>
                                             </div>
                                     </div>
                                     </div>

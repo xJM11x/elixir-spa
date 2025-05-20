@@ -1,0 +1,26 @@
+[
+    {
+        "id": "blog1",
+        "image": "/images/Blogs/Blog1.png",
+        "title": "Consejos para Antes y Después de una Cita de Spa",
+        "text": "Aquí te compartimos algunos consejos prácticos para que tu cita de spa sea realmente transformadora."
+    },
+    {
+        "id":"blog2",
+        "image": "/images/Blogs/Blog2.png",
+        "title": "Beneficios de una Limpieza Facial Profesional",
+        "text": "Un buen masaje no solo relaja, también mejora tu salud física y mental. Libera el estrés, alivia dolores y recarga tu energía en solo una sesión. ¡Tu cuerpo lo merece!."
+    },
+    {
+        "id":"blog3",
+        "image": "/images/Blogs/Blog3.png",
+        "title": "La Importancia de Ir a un Spa: Más Allá del Lujo, una Necesidad para tu Bienestar",
+        "text": "Ir al spa no es un lujo, es bienestar. Regálate ese momento para desconectar del estrés, cuidar tu piel y reconectar contigo misma. ¡Tu mente y tu cuerpo te lo agradecerán!"
+    },
+    {
+        "id":"blog4",
+        "image": "/images/Blogs/Blog4.png",
+        "title": "Tipos de piel: Cómo saber cuál es la tuya y qué necesita",
+        "text": "Cada piel es única y necesita cuidados distintos. Aprende a identificar tu tipo de piel y dale lo que realmente necesita para lucir sana, joven y radiante. ¡Tu piel te lo dirá con resultados!"
+    }
+]
