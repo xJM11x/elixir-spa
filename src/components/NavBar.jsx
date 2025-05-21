@@ -16,7 +16,7 @@ const NavBar = () => {
 
     return (
         <div className="bg-[#5C6C4A] text-[#FBFBFB] px-4 fixed min-h-[108px] z-10 w-screen max-w-full flex">
-            <div className="flex items-center justify-between py-4 px-2 lg:px-12 w-full">
+            <div className="flex items-center justify-between px-2 lg:px-12 w-full">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2">
                     <img className="cursor-pointer" src="/images/Logo.png" alt="Logo" />

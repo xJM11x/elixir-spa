@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import ServicesPage from "./pages/ServicesPage";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
 import ReservetionPage from "./pages/ReservationPage";
+import SuccessPage from "./pages/SuccessPage";
 
 export default function App() {
   return (
@@ -21,6 +22,8 @@ export default function App() {
         <Route path="/services" element = {<ServicesPage/>}/>
         <Route path="/serviceDetail/:id" element={<ServiceDetailPage/>}/>
         <Route path="/reservation" element={<ReservetionPage/>}/>
+        <Route path="/success" element={<SuccessPage />} />
+
       </Routes>
       <Footer/>
     </BrowserRouter>

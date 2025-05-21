@@ -2,6 +2,7 @@ import { useState } from "react";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import '../customCalendar.css'; // Aquí personalizaremos
+import PayPalPayment from "../components/PaypalPayment";
 
 const ReservetionPage = () => {
     const [service, setService] = useState(false);
@@ -63,7 +64,7 @@ const ReservetionPage = () => {
     }
 
     return(
-        <div className="pt-[108px] px-[80px] relative">
+        <div className="pt-[138px] px-[80px] relative">
             {!compra && (
                 <div>
             {errorMessage && (
@@ -160,7 +161,34 @@ const ReservetionPage = () => {
                 </div>
             </div>
             </div>)}
+            {compra && (
+            <div className="mb-[80px] relative z-[0] bg-white shadow-lg rounded-xl p-6 max-w-[600px] mx-auto mt-10 border border-gray-200">
+                <h2 className="text-3xl font-playfair-display font-semibold text-center text-[#5C6C4A] mb-4">
+                    Confirmar Reserva
+                </h2>
 
+                {/* Detalles del servicio */}
+                <div className="mb-6 text-gray-700">
+                    <p className="text-lg font-semibold">💆 Servicio:</p>
+                    <p className="ml-2">{serviceFakeN}</p>
+
+                    <p className="text-lg font-semibold mt-4">💵 Precio:</p>
+                    <p className="ml-2">$201.65 MXN / $10.00 USD</p>
+
+                    <p className="text-lg font-semibold mt-4">📍 Ubicación:</p>
+                    <p className="ml-2">Elixir Spa</p>
+                    
+                    <p className="text-lg font-semibold mt-4"> Horario:</p>
+                    <p className="ml-2">{selectSch}</p>
+
+                    <p className="text-lg font-semibold mt-4"> Fecha:</p>
+                    <p className="ml-2">{fecha.toLocaleDateString()}</p>
+                </div>
+
+                {/* Botón de pago */}
+                <PayPalPayment servicio={serviceName}/>
+            </div>
+            )}.
         </div>
     )
 }
