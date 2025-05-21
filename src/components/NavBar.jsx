@@ -19,7 +19,7 @@ const NavBar = () => {
             <div className="flex items-center justify-between px-2 lg:px-12 w-full">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2">
-                    <img className="cursor-pointer" src="/images/Logo.png" alt="Logo" />
+                    <img className="cursor-pointer" src="/Logo.svg" alt="Logo" />
                     <h1 className="cursor-pointer font-playfair-display text-[28px] lg:text-[52px] xl:text-[64px] font-medium">ELIXIR SPA</h1>
                 </Link>
 

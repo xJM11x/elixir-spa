@@ -1,5 +1,6 @@
 import { Navigate, useParams } from "react-router-dom";
 import ConvertService from "../components/ConvertService";
+import FadeInSection from "../components/FadeInSection";
 
 const ServiceDetailPage = () => {
 
@@ -182,24 +183,32 @@ Perfecta para cerrar la semana con un respiro o recargar energías antes de un d
     return(
         <div className="pt-[108px] w-full  flex justify-center flex-col bg-gradient-to-b from-[#CADBB7] to-[#93A267] ">
             <div className=" w-full flex flex-col px-[20px] md:px-[80px] items-center">
+                <FadeInSection>
                 <div className="text-center md:text-start flex flex-col-reverse md:flex-row max-w-[878px] pt-[40px] md:pt-[60px]">
                     <img className="mx-auto md:mx-0 w-full max-w-[306px] mt-[24px] md:mb-0 md:mr-[33px]" src={service.imagen} alt="servicio" />
                     <ConvertService content={service.content1}/>
                 </div>
+                </FadeInSection>
+                <FadeInSection>
                 <div className="md:justify-between flex flex-col md:flex-row max-w-[878px] my-[34px]" >
                     <ConvertService content={service.content2}/>
                     <img className="w-full mt-[33px]  mx-auto md:mx-0 max-w-[412px] md:ml-[33px]" src="/images/services/Facial.png" alt="servicio" />
                 </div>
+                </FadeInSection>
             </div>
             <div className="px-[20px] md:px-[80px] bg-[#FBFBFB]/50 py-[40px] flex justify-center mb-[100px]">
                 <div style={{ boxShadow: '0 2px 2px rgba(0, 0, 0, .3)' }} className=" w-full bg-white flex flex-col px-[35px] pb-[60px] pt-[27px]">
                     <div className="flex justify-between flex-col lg:flex-row items-center">
                         <div className="text-center md:text-start max-w-[537px] mb-[40px]">
-                            <ConvertService content={service.content3}/>
+                            <FadeInSection>
+                                <ConvertService content={service.content3}/>
+                            </FadeInSection>
                         </div>
-                        <img className="mb-[30px] md:mb-0 w-full max-w-[306px] mx-[42px]" src="/images/benefits.png" alt="servicio" />                    
+                        <FadeInSection>
+                            <img className="mb-[30px] md:mb-0 w-full max-w-[306px] md:mx-[42px]" src="/images/benefits.png" alt="servicio" />                    
+                        </FadeInSection>
                     </div>
-                    <ConvertService content={service.content4}/>
+                    <FadeInSection><ConvertService content={service.content4}/></FadeInSection>
                 </div>
             </div>
         </div>

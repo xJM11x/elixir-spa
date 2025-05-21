@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import FadeInSection from "../components/FadeInSection";
 
 const ServicesPage = () => {
     const services = [
@@ -34,17 +35,21 @@ const ServicesPage = () => {
             <div className="w-full relative">
                 <img className="min-h-[222px] w-full object-cover" src="/images/services.svg" alt="services" />
                 <div className="top-0 absolute w-full h-full flex items-center justify-center">
+                   <FadeInSection>
                     <h1 className="mt-[-70px] font-playfair-display text-[52px] font-bold text-white">SERVICIOS</h1>
+                    </FadeInSection>
                 </div>
             </div>
             <div className="w-full px-[20px] sm:px-[40px] md:px-[80px] flex justify-center">
                 <div className="grid grid-cols-2 gap-y-[32px] gap-x-[10px] sm:gap-x-[35px] md:gap-x-[85px] lg:gap-x-[80px] mt-[54px] bg-white/70 px-[10px] sm:px-[35px] md:px-[97px] py-[45px] rounded-[10px]">
                     {services.map((serv, index) => (
+                    <FadeInSection>
                     <div key={index} className="w-fit font-inter">
                         <Link to={"/serviceDetail/" + serv.link}><img className="transition-transform hover:scale-105 rounded-[8px] w-full max-h-[306px] max-w-[308px] aspect-[16/11] object-cover" src={serv.image} alt="serv" /></Link>
                         <p className="mt-[12px] text-[20px] font-medium text-[#000000]">{serv.text}</p>
                         <Link to={"/serviceDetail/" + serv.link}><p className="transition-transform hover:scale-105  inline-flex cursor-pointer text-[16px] text-[#5C6C4A]">Ver Más</p></Link>
                     </div>
+                    </FadeInSection>
                     ))} 
                 </div>
             </div>

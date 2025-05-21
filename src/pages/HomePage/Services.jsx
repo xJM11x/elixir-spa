@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { useRef } from "react"; 
 import { Link } from 'react-router-dom';
+import FadeInSection from '../../components/FadeInSection';
 
 const Services = () => {
 
@@ -35,8 +36,9 @@ const Services = () => {
     ];
     return(
         <div className=''>
-            <h1 className="font-playfair-display text-center  font-bold text-[32px] md:text-[48px] text-[#485935] mb-0 md:mb-[82px] mt-[56px]">SERVICIOS</h1>
-                <div className="w-full h-full relative flex items-center justify-center select-none my-[64px]">
+            <FadeInSection><h1 className="font-playfair-display text-center  font-bold text-[32px] md:text-[48px] text-[#485935] mb-0 md:mb-[82px] mt-[56px]">SERVICIOS</h1></FadeInSection>
+                <FadeInSection>
+                    <div className="w-full h-full relative flex items-center justify-center select-none my-[64px]">
                     <Swiper
                         ref={swiperRef}
                         spaceBetween={64}
@@ -92,6 +94,7 @@ const Services = () => {
                         className='absolute w-[40%] md:w-auto mr-[20px] right-0 cursor-pointer' src="/images/services/Arrow.png"></img>                        
                     </div>
             </div>
+            </FadeInSection>
 
 
         </div>
