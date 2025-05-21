@@ -30,7 +30,7 @@ const NavBar = () => {
 
                 {/* Menú de navegación */}
                 <ul className={`flex-col lg:flex-row font-open-sans text-[22px] lg:text-[28px] ease-in-out gap-6 lg:gap-[32px] absolute lg:static top-full left-0 w-full lg:w-auto bg-[#5C6C4A] lg:bg-transparent px-6 py-4 lg:p-0 transition-all duration-300 ${isOpen ? "flex" : "hidden"} lg:flex`}>
-                    <Link to="/" className={`${linkClass} ${isActive("/")}`} onClick={() => setIsOpen(false)}>Inicio</Link>
+                    <Link to="/prueba" className={`${linkClass} ${isActive("/")}`} onClick={() => setIsOpen(false)}>Inicio</Link>
                     <Link to="/services" className={`${linkClass} ${isActive("/services")}`} onClick={() => setIsOpen(false)}>Servicios</Link>
                     <Link to="/blog" className={`${linkClass} ${isActive("/blog")}`} onClick={() => setIsOpen(false)}>Blog</Link>
                     <Link to="/reservation" className="transition-transform rounded-[8px] bg-[#93A267] hover:scale-105 hover:bg-[#b2c17f] cursor-pointer text-white px-[12px] py-[6px] w-fit flex items-center justify-center" onClick={() => setIsOpen(false)}>
