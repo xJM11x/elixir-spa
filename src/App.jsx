@@ -27,7 +27,7 @@ export default function App() {
         <Route path="/success" element={<SuccessPage />} />
         <Route path="/privacity" element={<PrivacityPage/>}/>
         <Route path="*" element={<HomePage/>}/>
-        <Route path="/prueba" element = {<Prueba/>}/>
+        <Route path="/prueba/:serviceName" element = {<Prueba/>}/>
 
       </Routes>
       <Footer/>

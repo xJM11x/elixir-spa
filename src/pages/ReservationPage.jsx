@@ -186,7 +186,7 @@ const ReservetionPage = () => {
                 </div>
 
                 {/* Botón de pago */}
-                <PayPalPayment servicio={serviceName}/>
+                <PayPalPayment/>
             </div>
             )}.
         </div>

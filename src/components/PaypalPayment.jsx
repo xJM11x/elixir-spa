@@ -1,6 +1,6 @@
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
-const PayPalPayment = ({servicio}) => {
+const PayPalPayment = () => {
   return (
     <PayPalScriptProvider options={{ "client-id": "AcAxC-c20q4LrOvPX6UrbVPbRaTiXCoZ27s2nNsntTVuJUSFEVo9rwMnMBK043_LVL4pA8wq8vZwbV4_",
         currency: "USD"
@@ -18,7 +18,7 @@ const PayPalPayment = ({servicio}) => {
               return actions.order.create({
                 purchase_units: [
                   {
-                    description: servicio,
+                    description: "spa",
                     amount: {
                       value: "10.00",
                       currency_code: "USD",
