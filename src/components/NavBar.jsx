@@ -33,7 +33,7 @@ const NavBar = () => {
                     <Link to="/" className={`${linkClass} ${isActive("/")}`} onClick={() => setIsOpen(false)}>Inicio</Link>
                     <Link to="/services" className={`${linkClass} ${isActive("/services")}`} onClick={() => setIsOpen(false)}>Servicios</Link>
                     <Link to="/blog" className={`${linkClass} ${isActive("/blog")}`} onClick={() => setIsOpen(false)}>Blog</Link>
-                    <Link to="/reservation" className="rounded-[8px] bg-[#93A267] hover:scale-105 hover:bg-[#b2c17f] cursor-pointer text-white px-[12px] py-[6px] w-fit flex items-center justify-center" onClick={() => setIsOpen(false)}>
+                    <Link to="/reservation" className="transition-transform rounded-[8px] bg-[#93A267] hover:scale-105 hover:bg-[#b2c17f] cursor-pointer text-white px-[12px] py-[6px] w-fit flex items-center justify-center" onClick={() => setIsOpen(false)}>
                         <p className="font-open-sans font-bold">RESERVA AHORA</p>
                     </Link>
                 </ul>

@@ -34,7 +34,7 @@ const Services = () => {
         },
     ];
     return(
-        <div>
+        <div className=''>
             <h1 className="font-playfair-display text-center  font-bold text-[48px] text-[#485935] mb-[82px] mt-[56px]">SERVICIOS</h1>
                 <div className="w-full h-full relative flex items-center justify-center select-none my-[64px]">
                     <Swiper

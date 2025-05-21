@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import AutoFormattedArticle from "../components/ConvertArticle";
 import { blogContents } from "../data/blogContent";
 import articles  from "../data/articles.json";
@@ -7,6 +7,11 @@ const ArticlePage = () => {
     const { id } = useParams();
     const content = blogContents[id];
     const publications = articles
+
+    if (!content) {
+        return <Navigate to="/" />;        
+    }
+
     return(
         <div className="pt-[170px] px-[80px] flex justify-center pb-[70px]">
             <div className="w-fit relative pr-0 md:pr-[48px]">

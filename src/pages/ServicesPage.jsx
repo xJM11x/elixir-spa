@@ -32,7 +32,7 @@ const ServicesPage = () => {
     return(
         <div className="pt-[108px] w-full flex items-center flex-col relative pb-[115px]">
             <div className="w-full relative">
-                <img className="w-full object-cover" src="/images/services.svg" alt="services" />
+                <img className="min-h-[222px] w-full object-cover" src="/images/services.svg" alt="services" />
                 <div className="top-0 absolute w-full h-full flex items-center justify-center">
                     <h1 className="mt-[-70px] font-playfair-display text-[52px] font-bold text-white">SERVICIOS</h1>
                 </div>
