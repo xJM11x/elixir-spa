@@ -13,6 +13,7 @@ const Hero = () => {
                     <p className="mb-[40px] font-open-sans text-[24px] font-bold">Elixir spa donde la calma florece</p>
                     <Boton name={'RESERVA AHORA'} />
                 </div>
+                <p className="text-center absolute bottom-0 left-0 font-open-sans text-[20px] font-bold text-white ml-[40px] mb-[20px]">C. Sexta, Moderno, 87380<br/> Tel: +52 868313-1313<br/> Lunes a Domingo 9:00 am a 4:00 pm</p>
             </div>
         </div>
     )

@@ -52,7 +52,7 @@ const ReservetionPage = () => {
 
     const schedule = [];
 
-    for (let hour = 10; hour <= 19; hour++) {
+    for (let hour = 9; hour <= 16; hour++) {
     const formattedHour = hour < 12
         ? `${hour} AM`
         : hour === 12
@@ -160,7 +160,7 @@ const ReservetionPage = () => {
                 </div>
             </div>
             </div>)}
-            
+
         </div>
     )
 }
