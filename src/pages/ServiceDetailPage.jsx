@@ -191,7 +191,7 @@ Perfecta para cerrar la semana con un respiro o recargar energías antes de un d
                     <img className="w-full mt-[33px]  mx-auto md:mx-0 max-w-[412px] md:ml-[33px]" src="/images/services/Facial.png" alt="servicio" />
                 </div>
             </div>
-            <div className="px-[20px] md:px-[80px] bg-[#FBFBFB]/50 py-[40px] flex justify-center">
+            <div className="px-[20px] md:px-[80px] bg-[#FBFBFB]/50 py-[40px] flex justify-center mb-[100px]">
                 <div style={{ boxShadow: '0 2px 2px rgba(0, 0, 0, .3)' }} className=" w-full bg-white flex flex-col px-[35px] pb-[60px] pt-[27px]">
                     <div className="flex justify-between flex-col lg:flex-row items-center">
                         <div className="text-center md:text-start max-w-[537px] mb-[40px]">

@@ -14,9 +14,9 @@ const NavBar = () => {
                         <Link to={"/services"} className="relative cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Servicios</Link>
                         <Link to={"/blog"} className="relative cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Blog</Link>
                         <li className="relative cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Contacto</li>
-                        <div className="rounded-[8px] bg-[#93A267] hover:scale-105 hover:bg-[#b2c17f] cursor-pointer text-white px-[12px] py-[6px] w-fit flex items-center justify-center">
+                        <Link to={"/reservation"} className="rounded-[8px] bg-[#93A267] hover:scale-105 hover:bg-[#b2c17f] cursor-pointer text-white px-[12px] py-[6px] w-fit flex items-center justify-center">
                             <p className="font-open-sans font-bold">RESERVA AHORA</p>
-                        </div>         
+                        </Link>         
                     </ul>
                 </div>
             </div>
