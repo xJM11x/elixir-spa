@@ -64,7 +64,7 @@ const ReservetionPage = () => {
     }
 
     return(
-        <div className="pt-[138px] px-[80px] relative">
+        <div className="pt-[138px] px-[20px] sm:px-[40px] md:px-[80px] relative">
             {!compra && (
                 <div>
             {errorMessage && (
@@ -72,53 +72,53 @@ const ReservetionPage = () => {
                 {errorMessage}
             </div>
             )}
-            <h1 className="mb-[60px] mt-[28px] font-playfair-display text-center font-bold text-[48px] text-[#485935]">Reservación</h1>            
-            <div className="flex w-full justify-center">
+            <h1 className="mb-[60px] mt-[28px] font-playfair-display text-center font-bold text-[32px] md:text-[48px] text-[#485935]">Reservación</h1>            
+            <div className="flex flex-col md:flex-row w-full justify-center items-center md:items-stretch">
                 <div className="w-full max-w-[362px] ">
                     <div className="flex flex-col relative">
-                        <p className="font-open-sans text-[18px] mb-[12px] font-bold">Selecciona un servicio facial:</p>
+                        <p className="font-open-sans text-[16px] md:text-[18px] mb-[12px] font-bold">Selecciona un servicio facial:</p>
                         <div onClick={()=> {service ? setService(false) : setService(true)}} className="relative cursor-pointer px-[10px] py-[16px] flex items-center justify-between w-full font-open-sans text-[18px] font-medium rounded-[10px] bg-[#CADBB7]/80">
-                            <p className="text-black font-open-sans text-[16px] font-[400]">{serviceFakeN}</p>   
+                            <p className="text-black font-open-sans text-[14px] md:text-[16px] font-[400]">{serviceFakeN}</p>   
                             <img onClick={()=> {service ? setService(false) : setService(true)}} className={`cursor-pointer right-0 ${service ? "rotate-180" : ""}`} src="/images/DownIcon.svg" />
                             <div className={`p-[8px] rounded-b-[10px] border-[#FFFFFFA3] border-solid border-[2px] absolute z-[1] right-0 top-[90%] font-open-sans w-full bg-[#CADBB7] text-black ${service ? "block" : "hidden"}`}>
                                 {services.map((serv, index) => (
-                                    <div key={index} onClick={() => {setServiceName(serv.link); setServiceFakeN(serv.text)}} className={`flex items-center hover:bg-[#485935] hover:text-white rounded-[8px] px-[8px] text-[16px] cursor-pointer mb-[4px] font-open-sans ${serv.link === serviceName ? "bg-[#485935] text-white" : ""}`}>
+                                    <div key={index} onClick={() => {setServiceName(serv.link); setServiceFakeN(serv.text)}} className={`flex items-center hover:bg-[#485935] hover:text-white rounded-[8px] px-[8px] text-[14px] md:text-[16px] cursor-pointer mb-[4px] font-open-sans ${serv.link === serviceName ? "bg-[#485935] text-white" : ""}`}>
                                         <img className="rounded-[10px] max-w-[50px] aspect-square" src={serv.image} alt="imagen" />
                                         <p  className="ml-[10px]" value={serv.link}>{serv.text}</p>
                                     </div>
                                 ))}
                             </div>       
                         </div>
-                        <p className="font-open-sans text-[18px] mt-[28px] mb-[12px] font-bold">Selecciona una hora:</p>            
+                        <p className="font-open-sans text-[14px] md:text-[18px] mt-[28px] mb-[12px] font-bold">Selecciona una hora:</p>            
                         <div onClick={()=> {scheBtn ? setSchBtn(false) : setSchBtn(true)}} className="relative cursor-pointer px-[10px] py-[16px] flex items-center justify-between w-full font-open-sans text-[18px] font-medium rounded-[10px] bg-[#CADBB7]/80">
-                            <p className="text-black font-open-sans text-[16px] font-[400]">{fakeselectSch}</p>   
+                            <p className="text-black font-open-sans text-[14px] md:text-[16px] font-[400]">{fakeselectSch}</p>   
                             <img onClick={()=> {scheBtn ? setSchBtn(false) : setSchBtn(true)}} className={`cursor-pointer right-0 ${scheBtn ? "rotate-180" : ""}`} src="/images/DownIcon.svg" />
                             <div className={`p-[8px] rounded-b-[10px] border-[#FFFFFFA3] border-solid border-[2px] absolute z-[1] right-0 top-[90%] font-open-sans w-full bg-[#CADBB7] text-black ${scheBtn ? "block" : "hidden"}`}>
                                 {schedule.map((sch, index) => (
-                                    <div key={index} onClick={() => {setSelectSch(sch); setfakeSelectSch(sch)}} className={`flex items-center hover:bg-[#485935] hover:text-white rounded-[8px] px-[8px] text-[16px] cursor-pointer mb-[4px] font-open-sans ${sch === selectSch ? "bg-[#485935] text-white" : ""}`}>
+                                    <div key={index} onClick={() => {setSelectSch(sch); setfakeSelectSch(sch)}} className={`flex items-center hover:bg-[#485935] hover:text-white rounded-[8px] px-[8px] text-[14px] md:text-[16px] cursor-pointer mb-[4px] font-open-sans ${sch === selectSch ? "bg-[#485935] text-white" : ""}`}>
                                         <p  className="ml-[10px]" value={sch}>{sch}</p>
                                     </div>
                                 ))}
                             </div>       
                         </div>
-                        <p className="font-open-sans text-[18px] mt-[28px] mb-[12px] font-bold">Nombre completo:</p>            
+                        <p className="font-open-sans text-[16px] md:text-[18px] mt-[28px] mb-[12px] font-bold">Nombre completo:</p>            
                         <input
                         type="text"
                         value={nombre}
                         onChange={(e) => setNombre(e.target.value)}
-                        className="text-black cursor-pointer px-[10px] py-[16px] flex items-center justify-between w-full font-open-sans text-[16px] font-medium rounded-[10px] bg-[#CADBB7]/80">
+                        className="text-black cursor-pointer px-[10px] py-[16px] flex items-center justify-between w-full font-open-sans text-[14px] md:text-[16px] font-medium rounded-[10px] bg-[#CADBB7]/80">
                         </input>
-                        <p className="font-open-sans text-[18px] mt-[28px] mb-[12px] font-bold">Correo electronico:</p>            
+                        <p className="font-open-sans text-[16px] md:text-[18px] mt-[28px] mb-[12px] font-bold">Correo electronico:</p>            
                         <input
                         type="text"
                         value={correo}
                         onChange={(e) => setCorreo(e.target.value)}
-                        className="text-black cursor-pointer px-[10px] py-[16px] flex items-center justify-between w-full font-open-sans text-[16px] font-medium rounded-[10px] bg-[#CADBB7]/80">
+                        className="text-black cursor-pointer px-[10px] py-[16px] flex items-center justify-between w-full font-open-sans text-[14px] md:text-[16px] font-medium rounded-[10px] bg-[#CADBB7]/80">
                         </input>
                     </div>            
                 </div>
-                <div className="flex flex-col max-w-[550px] w-full ml-[150px]">
-                    <h2 className="font-open-sans text-[18px] mb-[12px] font-bold">Selecciona una fecha:</h2>
+                <div className="flex flex-col max-w-[550px] w-full ml-0 md:ml-[150px] mt-[40px] md:mt-0">
+                    <h2 className="font-open-sans text-[16px] md:text-[18px] mb-[12px] font-bold">Selecciona una fecha:</h2>
                     
                     <div className="">
                     <Calendar
