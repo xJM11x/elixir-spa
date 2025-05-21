@@ -3,6 +3,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import '../customCalendar.css'; // Aquí personalizaremos
 import PayPalPayment from "../components/PaypalPayment";
+import { Navigate } from "react-router-dom";
 
 const ReservetionPage = () => {
     const [service, setService] = useState(false);
@@ -65,8 +66,6 @@ const ReservetionPage = () => {
 
     return(
         <div className="pt-[138px] px-[20px] sm:px-[40px] md:px-[80px] relative">
-            {!compra && (
-                <div>
             {errorMessage && (
             <div className="rounded-[15px] border-[3px] border-black fixed font-open-sans text-[20px] mr-[40px] mb-[20px] text-white bottom-0 right-0 bg-red-500 p-4 text-center shadow-md z-[2]">
                 {errorMessage}
@@ -148,7 +147,7 @@ const ReservetionPage = () => {
                         setErrorMessage('Por favor, ingresa tu correo.');
                     } else {
                         setErrorMessage('');
-                        setCompra(true)
+                        <Navigate to={"/prueba/" + serviceName}/>
                         return;
                     }
 
@@ -160,35 +159,6 @@ const ReservetionPage = () => {
                     <p className="text-[20px] font-open-sans font-bold">Continuar</p>
                 </div>
             </div>
-            </div>)}
-            {compra && (
-            <div className="mb-[80px] relative z-[0] bg-white shadow-lg rounded-xl p-6 max-w-[600px] mx-auto mt-10 border border-gray-200">
-                <h2 className="text-3xl font-playfair-display font-semibold text-center text-[#5C6C4A] mb-4">
-                    Confirmar Reserva
-                </h2>
-
-                {/* Detalles del servicio */}
-                <div className="mb-6 text-gray-700">
-                    <p className="text-lg font-semibold">💆 Servicio:</p>
-                    <p className="ml-2">{serviceFakeN}</p>
-
-                    <p className="text-lg font-semibold mt-4">💵 Precio:</p>
-                    <p className="ml-2">$201.65 MXN / $10.00 USD</p>
-
-                    <p className="text-lg font-semibold mt-4">📍 Ubicación:</p>
-                    <p className="ml-2">Elixir Spa</p>
-                    
-                    <p className="text-lg font-semibold mt-4"> Horario:</p>
-                    <p className="ml-2">{selectSch}</p>
-
-                    <p className="text-lg font-semibold mt-4"> Fecha:</p>
-                    <p className="ml-2">{fecha.toLocaleDateString()}</p>
-                </div>
-
-                {/* Botón de pago */}
-                <PayPalPayment/>
-            </div>
-            )}.
         </div>
     )
 }

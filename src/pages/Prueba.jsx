@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import PayPalPayment from "../components/PaypalPayment"
 
 const Prueba = () => {
@@ -21,7 +22,7 @@ const Prueba = () => {
                 </div>
 
                 {/* Botón de pago */}
-                <PayPalPayment servicio={serviceName}/>
+                <PayPalPayment/>
             </div>
     )
 }
