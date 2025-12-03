@@ -10,6 +10,9 @@ import ServiceDetailPage from "./pages/ServiceDetailPage";
 import ReservetionPage from "./pages/ReservationPage";
 import SuccessPage from "./pages/SuccessPage";
 import PrivacityPage from "./pages/PrivacityPage";
+import Log from "./pages/LoginPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 export default function App() {
   return (
@@ -25,6 +28,8 @@ export default function App() {
         <Route path="/reservation" element={<ReservetionPage/>}/>
         <Route path="/success" element={<SuccessPage />} />
         <Route path="/privacity" element={<PrivacityPage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/register" element={<RegisterPage/>}/>
         <Route path="*" element={<HomePage/>}/>
 
       </Routes>
