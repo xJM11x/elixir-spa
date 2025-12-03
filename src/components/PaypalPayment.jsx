@@ -1,6 +1,9 @@
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import { useNavigate } from "react-router-dom";
 
 const PayPalPayment = () => {
+  const navigate = useNavigate();
+
   return (
     <PayPalScriptProvider options={{ "client-id": "AcAxC-c20q4LrOvPX6UrbVPbRaTiXCoZ27s2nNsntTVuJUSFEVo9rwMnMBK043_LVL4pA8wq8vZwbV4_",
         currency: "USD"
@@ -27,9 +30,8 @@ const PayPalPayment = () => {
                 ],
               });
             }}
-            onApprove={(data, actions) => {
-            alert("✅ Pago simulado exitosamente.");
-            window.location.href = "/success";
+            onApprove={(data, actions) => {            
+            navigate("/success")
             }}
             onCancel={() => {
               alert("⚠️ El pago fue cancelado.");

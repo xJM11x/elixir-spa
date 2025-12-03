@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Login } from "../req/Auth";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/useAuth";
 
 export default function LoginPage() {
   const [form, setForm] = useState({ username: "", password: "" });
 
+  const { handleLogin } = useAuth();
+  
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -17,10 +19,10 @@ export default function LoginPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-        const res = await Login(form);     
+        const res = await handleLogin(form);     
         if(res.data){
             console.log(res);
-            navigate("/");
+            navigate("/home");
         }
       }
       catch(err){
@@ -29,9 +31,11 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-green-50">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-green-50">
+      <h1 className="text-4xl font-bold text-center text-green-600 mb-6">
+        Elixir Spa
+      </h1>
       <div className="w-full max-w-md p-8 bg-white shadow-xl rounded-xl border border-green-200">
-        
         <h1 className="text-3xl font-bold text-center text-green-600 mb-6">
           Iniciar Sesión
         </h1>

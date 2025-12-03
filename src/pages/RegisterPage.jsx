@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Register } from "../req/Auth";
+import { useAuth } from "../context/useAuth";
 
 export default function RegisterPage() {
   const [form, setForm] = useState({ username: "", password: "" });
 
   const navigate = useNavigate();
 
+  const { handleSignup } = useAuth();
+  
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -17,10 +19,10 @@ export default function RegisterPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-        const res = await Register(form)      
+        const res = await handleSignup(form)      
         if(res.data){
             console.log(res);
-            navigate("/login");
+            navigate("/");
         }
       }
       catch(err){
@@ -29,7 +31,10 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-green-50">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-green-50">
+      <h1 className="text-4xl font-bold text-center text-green-600 mb-6">
+        Elixir Spa
+      </h1>        
       <div className="w-full max-w-md p-8 bg-white shadow-xl rounded-xl border border-green-200">
         
         <h1 className="text-3xl font-bold text-center text-green-600 mb-6">
